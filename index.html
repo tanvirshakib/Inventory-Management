@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Inventory Management System</h1>
+    
+    <!-- Form to add items -->
+    <form id="itemForm">
+        <input type="text" id="name" placeholder="Item Name" required>
+        <input type="number" id="quantity" placeholder="Quantity" required>
+        <input type="text" id="unit" placeholder="Unit" required>
+        <input type="text" id="stockStatus" placeholder="Stock Status" required>
+        <input type="number" id="reorderLevel" placeholder="Reorder Level" required>
+        <input type="date" id="canServeTill" placeholder="Can Serve Till">
+        <button type="button" onclick="addItem()">Add Item</button>
+    </form>
+    
+    <!-- Table to display items -->
+    <table id="inventoryTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Unit</th>
+                <th>Stock Status</th>
+                <th>Reorder Level</th>
+                <th>Can Serve Till</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Inventory items will be dynamically populated here -->
+        </tbody>
+    </table>
+    
+    <script src="app.js"></script>
+</body>
+</html>
