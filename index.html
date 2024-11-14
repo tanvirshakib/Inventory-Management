@@ -38,6 +38,30 @@
         </tbody>
     </table>
     
-    <script src="app.js"></script>
+    <!-- Firebase SDKs -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getFirestore, collection, getDocs, addDoc, updateDoc, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCvChf6-NghhXB84UvFYjl3Q95iPAFrrCI",
+            authDomain: "inventory-management-d1179.firebaseapp.com",
+            projectId: "inventory-management-d1179",
+            storageBucket: "inventory-management-d1179.appspot.com",
+            messagingSenderId: "1025808734742",
+            appId: "1:1025808734742:web:a81f2676145071561f7337",
+            measurementId: "G-NYMC0G12PM"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Import and call your functions in app.js to interact with Firestore
+        import { fetchItems, addItem, editItem, deleteItem } from './app.js';
+        fetchItems(db);
+    </script>
 </body>
 </html>
