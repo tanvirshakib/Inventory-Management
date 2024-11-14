@@ -1,4 +1,5 @@
 // Google Apps Script Web App URL with your deployment ID
+// Use the new Web App URL provided
 const apiUrl = 'https://script.google.com/macros/s/AKfycbx4-5OOjMHwN2T9DeRmkkrAAE_15qEi03oq2w8b2OgVereonOgwNcEbsuEQExXO7oR-lw/exec';
 
 // Fetch and display all items
